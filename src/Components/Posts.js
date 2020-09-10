@@ -7,7 +7,7 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { ExpandMoreOutlined } from "@material-ui/icons";
 
-export default function Posts({
+export default function Post({
   profilePic,
   image,
   username,
@@ -20,8 +20,7 @@ export default function Posts({
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__topInfo">
           <h3>{username}</h3>
-          {/* <p>{new Date(timestampt?.toDate()).toUTCString()}</p> */}
-          <p>Timestamp...</p>
+          <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
         </div>
       </div>
 

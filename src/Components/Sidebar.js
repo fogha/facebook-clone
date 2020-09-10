@@ -8,14 +8,14 @@ import ChatIcon from "@material-ui/icons/Chat";
 import StoreFrontIcon from "@material-ui/icons/Storefront";
 import VideLibraryIcon from "@material-ui/icons/VideoLibrary";
 import { ExpandMoreOutlined } from "@material-ui/icons";
+import { useStateValue } from "../StateProvider";
 
 export default function Sidebar() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="sidebar">
-      <SidebarRow
-        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Tom_Hanks_TIFF_2019.jpg"
-        title="Fogha Armand"
-      />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow
         Icon={LocalHospitalIcon}
         title="Covid-19 Information Center"
